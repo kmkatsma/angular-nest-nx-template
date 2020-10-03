@@ -1,0 +1,41 @@
+<div fxLayout="row" style="margin-top: 8px">
+  <button
+    *ngIf="showSave"
+    type="button"
+    color="primary"
+    mat-raised-button
+    (click)="save()"
+  >
+    SAVE
+  </button>
+  <button
+    *ngIf="showCancel"
+    type="button"
+    color="primary"
+    mat-button
+    (click)="cancel()"
+  >
+    CANCEL
+  </button>
+  <div style="margin-left: 16px"></div>
+  <button
+    *ngIf="showPrint"
+    type="button"
+    color="primary"
+    mat-button
+    (click)="print()"
+  >
+    <mat-icon>print</mat-icon>PRINT
+  </button>
+  <div style="margin-left: 16px"></div>
+  <div fxFlex></div>
+  <button
+    *ngIf="showDelete"
+    type="button"
+    color="primary"
+    mat-button
+    (click)="delete()"
+  >
+    <mat-icon>delete</mat-icon>DELETE
+  </button>
+</div>

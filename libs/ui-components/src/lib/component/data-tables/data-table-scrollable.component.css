@@ -1,0 +1,17 @@
+/*::ng-deep .cdk-column-Id {
+  max-width: 70px;
+}
+
+::ng-deep .cdk-column-nocheckbox {
+  max-width: 0px;
+}
+
+::ng-deep .cdk-column-checkbox {
+  max-width: 50px;
+}*/
+
+:host {
+  flex: 1;
+  display: flex;
+  flex-direction: column !important;
+}

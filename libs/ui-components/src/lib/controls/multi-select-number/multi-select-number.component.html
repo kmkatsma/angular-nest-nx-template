@@ -1,0 +1,36 @@
+<div [formGroup]="form" *ngIf="listData" fxLayout="column">
+  <mat-form-field style="min-width: 300px">
+    <mat-select
+      [placeholder]="placeHolder"
+      [formControlName]="controlName"
+      multiple
+      #serviceTypesSelect
+    >
+      <mat-select-trigger>
+        <span>{{ selectedItems }}</span>
+      </mat-select-trigger>
+      <mat-option *ngFor="let service of listData" [value]="service">{{
+        service
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-checkbox
+    *ngIf="showSelectAll && selectAllControlName"
+    type="checkbox"
+    id="selectAllServiceTypes"
+    [formControlName]="selectAllControlName"
+    ([value])="(allSelected)"
+    (click)="selectAll(serviceTypesSelect)"
+    style="min-width: 113px"
+    >Select All</mat-checkbox
+  >
+  <mat-checkbox
+    *ngIf="showSelectAll && !selectAllControlName"
+    type="checkbox"
+    id="selectAllServiceTypes"
+    ([value])="(allSelected)"
+    (click)="selectAll(serviceTypesSelect)"
+    style="min-width: 113px"
+    >Select All</mat-checkbox
+  >
+</div>

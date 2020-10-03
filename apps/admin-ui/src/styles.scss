@@ -1,0 +1,333 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+// Include the base styles for Angular Material core. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+@include mat-core();
+//***************************************************
+//light theme
+//***************************************************
+// primary #1565c0  dark #003c8f    light  #5e92f3
+// secondary #76ff03 dark #32cb00  light #b0ff57
+
+$ocw-primary: (
+  200: #5e92f3,
+  500: #1976d2,
+  600: #1976d2,
+  700: #004ba0,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: white,
+  ),
+);
+$ocw-secondary: (
+  200: #b0ff57,
+  500: #76ff03,
+  700: #32cb00,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: $black-87-opacity,
+    600: $black-87-opacity,
+    700: $black-87-opacity,
+    800: $black-87-opacity,
+    900: $black-87-opacity,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: white,
+  ),
+);
+$ocw-grey: (
+  50: #f7f7f7,
+  100: #cfcfcf,
+  200: #5e83a9,
+  //718792
+    500: #496582,
+  700: #1c313a,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: white,
+  ),
+);
+$primary: mat-palette($ocw-primary, 500, 200, 700);
+$accent: mat-palette($mat-light-green, A200, A100, A400);
+$grey: mat-palette($ocw-grey, 500, 200, 700);
+$warn: mat-palette($mat-red);
+$theme: mat-light-theme($primary, $accent, $warn);
+$background: map-get($theme, background);
+@include angular-material-theme($theme);
+// ****************************************************
+// dark them alternate
+// ****************************************************
+$dark-primary: mat-palette($mat-blue-grey);
+$dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$dark-warn: mat-palette($mat-deep-orange);
+$dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+$dark-background: map-get($dark-theme, background);
+.dark-theme {
+  @include angular-material-theme($dark-theme);
+  .mat-tab-labels {
+    /* background: mat-color($dark-primary, 500);
+    color: mat-color($dark-primary, default-contrast) !important; */
+  }
+  .mat-toolbar {
+    background: mat-color($dark-primary, 700);
+    color: mat-color($dark-primary, default-contrast);
+  }
+  .accent-color {
+    color: mat-color($dark-accent);
+  }
+  .primary-color {
+    color: mat-color($dark-primary, 500) !important;
+  }
+  .primary-color-dark {
+    background: mat-color($dark-primary, 700) !important;
+    color: mat-color($dark-primary, default-contrast) !important;
+  }
+  .primary-back-color {
+    background: mat-color($dark-primary, 500) !important;
+    color: mat-color($dark-primary, default-contrast) !important;
+  }
+  .primary-light-back-color {
+    background: mat-color($dark-primary, 100) !important;
+    color: mat-color($dark-primary, lighter-contrast) !important;
+  }
+  .primary-grey-back-color-light {
+    background: mat-color($dark-primary, 50) !important;
+    color: mat-color($dark-primary, lighter-contrast) !important;
+  }
+  .primary-grey-back-color-medium {
+    background: mat-color($dark-primary, 200) !important;
+    color: mat-color($dark-primary, default-contrast) !important;
+  }
+  .primary-grey-back-color {
+    background: mat-color($dark-primary, 100) !important;
+    color: mat-color($dark-primary, lighter-contrast) !important;
+  }
+  .primary-grey-back-color-dark {
+    background: mat-color($dark-primary, 500) !important;
+    color: mat-color($dark-primary, default-contrast) !important;
+  }
+  .primary-grey-color {
+    color: mat-color($grey, 500) !important;
+  }
+  .background-color {
+    background-color: mat-color($dark-background, background) !important;
+  }
+}
+.mat-toolbar {
+  background: mat-color($primary, 700);
+  color: mat-color($primary, default-contrast);
+}
+.mat-card-title {
+  font-size: 18px;
+}
+.ocw-toolbar {
+  background: mat-color($primary, 500) !important;
+  color: mat-color($primary, default-contrast);
+}
+.ocw-light-toolbar {
+  background: mat-color($primary, 200) !important;
+  color: mat-color($primary, default-contrast);
+}
+.mat-row:hover {
+  background: mat-color($background, 'hover');
+}
+nav-item-focus {
+  background: mat-color($background, 'hover');
+}
+.accent-color {
+  color: mat-color($accent);
+}
+.primary-color {
+  color: mat-color($primary, 500) !important;
+}
+.primary-color-dark {
+  background: mat-color($primary, 700) !important;
+  color: mat-color($primary, default-contrast);
+}
+.primary-back-color {
+  background: mat-color($primary, 500) !important;
+  color: mat-color($primary, default-contrast);
+}
+.primary-light-back-color {
+  background: mat-color($primary, 100) !important;
+  color: mat-color($primary, lighter-contrast) !important;
+}
+.primary-grey-back-color-light {
+  background: mat-color($grey, 50) !important;
+  color: mat-color($grey, lighter-contrast) !important;
+}
+.primary-grey-back-color-medium {
+  background: mat-color($grey, 200) !important;
+  color: mat-color($grey, default-contrast) !important;
+}
+.primary-grey-back-color {
+  background: mat-color($grey, 100) !important;
+  color: mat-color($grey, lighter-contrast) !important;
+}
+.primary-grey-back-color-dark {
+  background: mat-color($grey, 500) !important;
+  color: mat-color($grey, default-contrast) !important;
+}
+.primary-grey-color {
+  color: mat-color($grey, 500) !important;
+}
+.background-color {
+  background-color: mat-color($background, background) !important;
+}
+.mat-tab-body-wrapper {
+  height: 100%;
+}
+.mat-menu-item {
+  line-height: 40px !important;
+  height: 40px !important;
+}
+.mat-expansion-panel-header {
+  padding: 0px 16px !important;
+  line-height: 40px !important;
+  height: 50px !important;
+}
+.mat-expansion-panel-body {
+  padding: 0px !important;
+}
+// .mat-tab-body-content {
+// overflow: visible !important;
+.mat-expansion-panel-header.mat-expanded {
+  // @at-root background: mat-color($grey, 200);
+}
+.mat-expansion-panel-body {
+  background: mat-color($grey, 200) !important;
+}
+.mat-sidenav {
+  border-right: 0px !important;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.card-fix-container {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+
+  .mat-card-content {
+    flex: 1;
+  }
+
+  & > .mat-card-actions:last-child {
+    margin-bottom: -16px;
+    padding-bottom: 0;
+  }
+}
+
+.ocw-layout-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.ocw-toolbar-fixed {
+  position: fixed;
+  top: 56px;
+}
+
+.ocw-mat-container {
+  position: absolute !important;
+  top: 112px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+
+.ocw-mat-container-short {
+  position: absolute !important;
+  top: 56px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+
+.questionGroup {
+  width: 32%;
+}
+
+@media (max-width: 600px) {
+  .questionGroup {
+    width: 50%;
+  }
+}
+
+.form-field {
+  min-width: 250px;
+}
+
+.question {
+  text-transform: uppercase;
+}
+
+.ocw-toolbar-text {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+#tab-group {
+  height: 100%;
+}
+
+.spinner {
+  height: 150px;
+  width: 150px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -75px;
+  margin-left: -75px;
+  z-index: 9999;
+}
+
+.mat-toolbar {
+  max-height: 56px;
+}
+
+.mat-card-row {
+  margin-bottom: 8px !important;
+}

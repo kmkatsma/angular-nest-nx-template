@@ -1,0 +1,31 @@
+<mat-form-field
+  *ngIf="formGroup && formGroup"
+  [formGroup]="formGroup"
+  class="form-field"
+>
+  <input
+    matInput
+    [placeholder]="item.field.placeHolder"
+    [formControlName]="item.field.formControlName"
+    maxlength="1"
+    spellcheck="false"
+    autocomplete="off"
+    class="question"
+  />
+</mat-form-field>
+<mat-form-field
+  style="margin-left:40px"
+  *ngFor="let depField of item.dependentFields"
+  class="form-field"
+  [formGroup]="formGroup"
+>
+  <input
+    *ngIf="formGroup"
+    matInput
+    [placeholder]="depField.placeHolder"
+    [formControlName]="depField.formControlName"
+    maxlength="50"
+    spellcheck="false"
+    autocomplete="off"
+  />
+</mat-form-field>

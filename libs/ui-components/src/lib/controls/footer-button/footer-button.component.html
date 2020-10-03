@@ -1,0 +1,11 @@
+<button
+  style="margin-top:-20px; z-index:1000; "
+  *ngIf="!isNew"
+  class="mat-elevation-z4"
+  mat-mini-fab
+  (click)="click()"
+  [matTooltip]="toolTip"
+  color="primary"
+>
+  <mat-icon>{{ icon }}</mat-icon>
+</button>

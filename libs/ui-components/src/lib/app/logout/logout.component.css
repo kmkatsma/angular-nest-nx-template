@@ -1,0 +1,27 @@
+.full-screen {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+.max-width {
+  max-width: 400px;
+  margin: auto;
+  align-content: center;
+  height: 100%;
+}
+
+.aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background {
+  /* background-image: url('../../../assets/images/bridge-bluish.jpg');*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #58595b;
+}

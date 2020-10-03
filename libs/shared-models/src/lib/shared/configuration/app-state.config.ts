@@ -1,0 +1,17 @@
+export enum BaseAppStateEnum {
+  SideNavOpened = 1,
+  IsDarkMode = 2,
+  PrimaryLocation = 3,
+  SecondaryLocation = 4,
+  ReferenceDataInfo = 5,
+  FormOpen = 6,
+  LoggedIn = 7,
+  ValidationRequired = 8,
+  Searching = 9,
+  Loading = 10,
+  SystemUserLoaded = 11,
+  SystemReferencesLoaded = 12,
+  ManageDataDomainEnum = 13,
+  ReportSelected = 14,
+  FormOpened = 15,
+}

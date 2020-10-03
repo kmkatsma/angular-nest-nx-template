@@ -1,0 +1,28 @@
+.show-div {
+  width: 4px;
+  background-color: greenyellow;
+}
+.hide-div {
+  width: 4px;
+}
+.no-div {
+  width: 0px;
+}
+.show-small-div {
+  width: 2px;
+  background-color: greenyellow;
+}
+.hide-small-div {
+  width: 2px;
+}
+
+.icon-inactive {
+  color: #9e9e9e;
+}
+.icon-active {
+  color: white !important;
+}
+
+.ocw-side-menu {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}

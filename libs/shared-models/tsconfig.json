@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "types": ["node", "jest"]
+  },
+  "include": [
+    "**/*.ts",
+    "../api-core/src/lib/reporting/report-output.ts",
+    "../shared-core/src/lib/utilities/month-info.ts"
+  ]
+}

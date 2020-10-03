@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "types": ["node", "jest"]
+  },
+  "include": [
+    "**/*.ts",
+    "../../apps/admin-ui/src/app/modules/users/user-admin.component.ts"
+  ]
+}

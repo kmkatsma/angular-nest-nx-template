@@ -1,0 +1,16 @@
+export enum BaseResourceEnum {
+  Attribute = 1,
+  Documents = 2,
+  Note = 3,
+  User = 4,
+  UserProfile = 5,
+  Partner = 6,
+  CurrentUser = 7,
+  ReferenceData = 8,
+  ReferenceEntity = 9,
+  AuditEvent = 10,
+  AttributeValue = 11,
+  PartnerYear = 12,
+  CloneYear = 13,
+  Tenant = 14,
+}

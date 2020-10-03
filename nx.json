@@ -1,0 +1,57 @@
+{
+  "npmScope": "ocw",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "api-access": {
+      "tags": []
+    },
+    "api-core": {
+      "tags": []
+    },
+    "api-services": {
+      "tags": []
+    },
+    "shared-core": {
+      "tags": []
+    },
+    "shared-models": {
+      "tags": []
+    },
+    "ui-core": {
+      "tags": []
+    },
+    "ui-layout": {
+      "tags": []
+    },
+    "ui-components": {
+      "tags": []
+    },
+    "admin-ui": {
+      "tags": []
+    },
+    "admin-ui-e2e": {
+      "tags": [],
+      "implicitDependencies": ["admin-ui"]
+    },
+    "admin-api": {
+      "tags": []
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  }
+}

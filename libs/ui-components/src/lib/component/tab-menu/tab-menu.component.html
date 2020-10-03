@@ -1,0 +1,64 @@
+<div
+  fxFlexFill
+  class="primary-grey-back-color-light"
+  (mouseleave)="mouseLeave($event)"
+>
+  <div *ngFor="let item of menu">
+    <div fxLayout="row">
+      <div [ngClass]="getDivClass(item.type)"></div>
+      <div
+        *ngIf="!item.errors"
+        fxFlex
+        fxHide
+        fxShow.gt-xs
+        [ngClass]="getClass(item.type)"
+        mat-menu-item
+        (click)="selectOption(item.type)"
+        style="cursor: pointer"
+      >
+        <mat-icon
+          style="font-size:20px;margin-right:8px; margin-left:0px"
+          [ngClass]="getClass(item.type)"
+          >{{ item.icon }}</mat-icon
+        >{{ item.label }}
+      </div>
+      <div
+        *ngIf="item.errors"
+        fxFlex
+        fxHide
+        fxShow.gt-xs
+        [ngClass]="getClass(item.type)"
+        mat-menu-item
+        (click)="selectOption(item.type)"
+        style="cursor: pointer"
+      >
+        <mat-icon
+          style="font-size:20px;margin-right:8px; margin-left:0px"
+          [ngClass]="getClass(item.type)"
+          >{{ item.icon }}</mat-icon
+        ><span
+          [matBadge]="item.errors"
+          matBadgeOverlap="true"
+          matBadgeColor="warn"
+        >
+          {{ item.label }}
+        </span>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="column" class="primary-grey-back-color-light">
+    <button
+      fxHide
+      fxShow.xs
+      *ngFor="let item of menu"
+      class="ocw-icon-button"
+      [ngClass]="getClass(item.type)"
+      mat-icon-button
+      (click)="selectOption(item.type)"
+    >
+      <mat-icon style="font-size:20px" [ngClass]="getClass(item.type)">{{
+        item.icon
+      }}</mat-icon>
+    </button>
+  </div>
+</div>

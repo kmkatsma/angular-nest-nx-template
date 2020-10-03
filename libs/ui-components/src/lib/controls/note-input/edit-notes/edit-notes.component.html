@@ -1,0 +1,43 @@
+<mat-dialog-content style="min-width:400px">
+  <mat-card>
+    <mat-card-title>
+      <div fxLayout="row" style="display: flex; justify-content: space-between">
+        <div>
+          <span style="display: inline-block; vertical-align: middle;"
+            >Notes</span
+          >
+        </div>
+      </div>
+    </mat-card-title>
+    <mat-card-content>
+      <mat-form-field class="" style="min-width: 300px">
+        <textarea
+          #notes
+          style="min-height:80px; min-width:300px"
+          [(ngModel)]="updatedNotes"
+          [attr.maxlength]="maxLength"
+          matInput
+          placeholder=""
+          name="notes"
+        ></textarea>
+        <mat-hint align="end"
+          >{{ updatedNotes.length }} / {{ maxLength }}</mat-hint
+        >
+      </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+  <div [ngStyle]="{ 'margin-top.px': 10 }">
+    <button type="button" color="primary" mat-button (click)="save()">
+      OK
+    </button>
+    <button
+      type="button"
+      color="primary"
+      mat-button
+      (click)="cancel()"
+      cdkFocusInitial
+    >
+      CANCEL
+    </button>
+  </div>
+</mat-dialog-content>

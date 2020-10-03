@@ -1,0 +1,31 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ocw/api-access": ["libs/api-access/src/index.ts"],
+      "@ocw/api-core": ["libs/api-core/src/index.ts"],
+      "@ocw/api-services": ["libs/api-services/src/index.ts"],
+      "@ocw/shared-core": ["libs/shared-core/src/index.ts"],
+      "@ocw/shared-models": ["libs/shared-models/src/index.ts"],
+      "@ocw/ui-core": ["libs/ui-core/src/index.ts"],
+      "@ocw/ui-layout": ["libs/ui-layout/src/index.ts"],
+      "@ocw/ui-components": ["libs/ui-components/src/index.ts"],
+      "core-js/es7/reflect": ["node_modules/core-js/proposals/reflect-metadata"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
